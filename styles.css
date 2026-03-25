@@ -206,6 +206,39 @@ a {
   width: 100%;
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.social-links a {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  line-height: 0;
+  transition: color 0.2s ease, border 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: var(--accent);
+  border-color: rgba(245, 182, 66, 0.6);
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
 .cta {
   background: var(--accent);
   color: #111111;
@@ -548,6 +581,10 @@ a {
     letter-spacing: 0.08em;
   }
 
+  .social-links {
+    width: 100%;
+  }
+
   .brand-text {
     font-size: 11px;
   }
@@ -639,6 +676,10 @@ a {
   .site-nav {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .social-links {
+    justify-content: flex-start;
   }
 
   .card-top {
