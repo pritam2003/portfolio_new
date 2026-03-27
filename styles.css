@@ -532,30 +532,86 @@ body[data-theme="dark"] .theme-toggle .icon-moon {
     padding: 24px 18px 32px;
   }
 
+  .site-header {
+    gap: 16px;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
   .header-actions {
     width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .header-actions .social-links {
+    order: 1;
+  }
+
+  .header-actions .theme-toggle {
+    order: 2;
   }
 
   .cta {
     width: 100%;
     text-align: center;
+    order: 3;
   }
 
   .hero {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
+  .hero-copy h1 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+
+  .hero-portrait {
+    justify-items: center;
+  }
+
+  .portrait-frame {
+    width: min(240px, 80vw);
+  }
+
+  .stats {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
 }
 
 @media (max-width: 520px) {
   .site-nav {
     gap: 10px;
-    font-size: 11px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+
+  .theme-toggle {
+    align-self: flex-start;
   }
 
   .card-top {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
   }
 
   .resume-btn {
